@@ -1,0 +1,23 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: oauth2-client
+
+logging.level:org.springframework: DEBUG
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+feign:
+  hystrix:
+    enabled: false
+
+ribbon:
+  eureka:
+    enabled: true
